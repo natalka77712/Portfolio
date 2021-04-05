@@ -1,0 +1,72 @@
+@import "../common/styles/sass/variables";
+@import "../common/styles/sass/mixins";
+
+.contactsBlock {
+  padding: 50px 0;
+
+  .contactsContainer {
+    flex-direction: column;
+
+    .title {
+      background-color: gray;
+    }
+
+    .formWrapper {
+      width: 100%;
+      padding: 50px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 100%;
+        max-width: 100%;
+        position: relative;
+        width: 100%;
+        @media screen and (min-width: 992px){
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+      }
+
+      .input {
+        margin-bottom: 1rem;
+        padding: 0 15px;
+        display: block;
+        height: calc(1.5em + .75rem + 2px);
+        @include text($TextFontFamily, 12px, 1.2);
+        background: $bgSecondColor;
+        border: 1px solid $borderColor;
+        border-radius: 0;
+        outline: none;
+        &:-webkit-autofill {
+          border: 1px solid #4a4a4a;
+          -webkit-text-fill-color: #495057;
+          -webkit-box-shadow: 0 0 0 1000px #252527 inset;
+          transition: background-color 5000s ease-in-out 0s;
+          &:focus {
+            border: 1px solid $borderColor;
+          }
+        }
+      }
+
+      .textarea {
+        padding: 15px;
+        margin-bottom: 1rem;
+        font-size: 12px;
+        line-height: 1.5;
+        min-height: 124px;
+        @include text($TextFontFamily, 12px, 1.2);
+        color: #495057;
+        border-radius: 0;
+        border: 1px solid $borderColor;
+        background: $bgSecondColor;
+        overflow: auto;
+        resize: vertical;
+        outline: none;
+      }
+    }
+  }
+}

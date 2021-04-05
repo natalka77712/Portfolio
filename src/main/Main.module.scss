@@ -1,0 +1,119 @@
+@import "../common/styles/sass/variables";
+@import "../common/styles/sass/mixins";
+
+.mainBlock {
+  height: 100vh;
+  @media screen and (max-width: 400px) {
+    height: auto;
+  }
+  @media screen and (max-width: 992px) {
+    padding-bottom: 100px;
+  }
+
+  .particles {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.3;
+  }
+
+  .textWrapper {
+    width: 60%;
+    vertical-align: middle;
+
+    @media screen and (max-width: 400px) {
+      padding-top: 50px;
+    }
+
+    span {
+      @include text($TextFontFamily, 14px, 1.8);
+      white-space: nowrap;
+    }
+
+    h2 {
+      margin: 0;
+      padding: 10px 0 10px;
+      @include text($TitleFontFamily, 50px, 1.2);
+      letter-spacing: 5px;
+      color: $textColor;
+      @media screen and (max-width: 400px) {
+        font-size: 40px;
+      }
+
+      p {
+        margin: 0;
+        position: relative;
+        display: inline-block;
+        @include text($TitleFontFamily, 50px, 1.2);
+        z-index: 1;
+        @media screen and (max-width: 400px) {
+          font-size: 40px;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 20px;
+          width: 100%;
+          z-index: -1;
+          background: $primaryColor;
+          @media screen and (min-width: 870px) and (max-width: 1124px)  {
+            width: 75%;
+          }
+        }
+      }
+    }
+
+    .profession {
+      margin: 0;
+      @include text($TextFontFamily, 27px, 1.8);
+      color: white;
+      @media screen and (max-width: 400px) {
+        font-size: 25px;
+      }
+    }
+  }
+
+  .photo {
+    position: relative;
+    z-index: 1;
+    @media screen and (max-width: 1143px){
+      margin-top: 50px;
+    }
+    .image {
+      height: 400px;
+      width: 300px;
+      @include bgSettings();
+      background-image: url("../assets/images/photo.jpg");
+      background-position: 80% 0;
+      @media screen and (max-width: 600px){
+        height: 360px;
+        width: 260px;
+        transition: .5s;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        height: 110%;
+        width: 105%;
+        border: 5px solid $primaryColor;
+        left: 15px;
+        top: -15px;
+        z-index: -1;
+      }
+
+      @media screen and (max-width: 400px) {
+        width: 240px;
+        &:before {
+          width: 103%;
+          left: 5px;
+        }
+      }
+    }
+  }
+}
