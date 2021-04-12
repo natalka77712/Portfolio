@@ -16,7 +16,7 @@
 
     .skills {
       width: 100%;
-      @include flex(row, center, flex-start, wrap);
+      @include flex(row, center, flex-end, wrap);
 
       @media screen and (max-width: 680px) {
         @include flex(column, center, center, wrap);

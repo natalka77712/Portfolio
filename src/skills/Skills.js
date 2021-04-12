@@ -20,9 +20,9 @@ function Skills() {
                 <div className={`${styleContainer.container} ${style.skillsContainer}`}>
                     <Title text={'Skills'}/>
                     <div className={style.skills}>
-                        <Skill title={"JS"} icon={js} description={"ES5, ES6"}/>
-                        <Skill title={"HTML/CSS"} icon={html} description={"LESS, SASS"}/>
-                        <Skill title={"React"} icon={react} description={"React, Redux"}/>
+                        <Skill title={"JS/TS"} icon={js} description={"JavaScript, TypeScript"}/>
+                        <Skill title={"HTML/CSS"} icon={html} description={"LESS, SASS, HTML, BEM, BOOTSTRAP"}/>
+                        <Skill title={"React"} icon={react} description={"React, Redux, Styled-components, Storybook, Ant Design, Rest API, Axios"}/>
                     </div>
                 </div>
             </Fade>

@@ -3,8 +3,11 @@
 
 .skill {
   margin-top: 60px;
-  width: 30%;
+  width: 33%;
   @include flex(column, center, center, nowrap);
+  @media screen and (max-width: 400px) {
+    width: 60%;
+  }
 }
 
 .icon {
